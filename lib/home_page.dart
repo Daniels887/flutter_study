@@ -28,9 +28,7 @@ class HomePageState extends State<HomePage> {
               height: 10,
             ),
             CustomSwitch(),
-            Container(
-              height: 50,
-            ),
+            Padding(padding: EdgeInsets.only(top: 50)),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
