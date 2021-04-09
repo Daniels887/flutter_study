@@ -10,18 +10,24 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   int counter = 0;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
+    return Scaffold(
+      appBar: AppBar(title: Text('Home Page'), centerTitle: true),
+      body: Center(
         child: GestureDetector(
-          child: Text('Contador: $counter'), 
+          child: Text('Contador: $counter', style: TextStyle(fontSize: 20),), 
           onTap: () {
             setState(() {
               counter++;
             });
           },
         )
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () => print('Hello'),
       ),
     );
   }
