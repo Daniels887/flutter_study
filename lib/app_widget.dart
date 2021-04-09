@@ -14,6 +14,7 @@ class AppWidget extends StatelessWidget {
             primarySwatch: Colors.red,
             brightness: AppController.instance.isDarkTheme ? Brightness.dark : Brightness.light,
           ),
+          debugShowCheckedModeBanner: false,
           home: HomePage(),
         );
       },
