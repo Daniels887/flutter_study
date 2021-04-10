@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/app_controller.dart';
+import 'package:flutter_study/home_page.dart';
 import 'package:flutter_study/login_page.dart';
 
 class AppWidget extends StatelessWidget {
@@ -14,7 +15,11 @@ class AppWidget extends StatelessWidget {
             brightness: AppController.instance.isDarkTheme ? Brightness.dark : Brightness.light,
           ),
           debugShowCheckedModeBanner: false,
-          home: LoginPage(),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => LoginPage(),
+            '/home': (context) => HomePage() 
+          },
         );
       },
     );
